@@ -28,6 +28,11 @@ const App = (props) => {
 		actions.getColors();
 	}
 
+	// useEffect(() => {
+	// 	if (state.stuff.data.length > 0 && state.stuff.data.length < 5)
+	// 	actions.getColors();
+	// }, [state.stuff.data]);
+
 	const generateFontColor = (bgColor) => {
 		const red = parseInt(bgColor.slice(1, 3), 16);
 		const green = parseInt(bgColor.slice(3, 5), 16);
@@ -60,6 +65,12 @@ const App = (props) => {
 						color: generateFontColor(color),
 					}}>
 						{color}
+						<div className="extra">
+							<div>This</div>
+							<div>That</div>
+							<div>Things</div>
+							<div>Stuff</div>
+						</div>
 					</div>
 				))}
 			</div>
